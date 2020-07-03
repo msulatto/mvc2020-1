@@ -1,8 +1,12 @@
 <?php
-require_once "app/config.php";
 require_once "autoload.php";
+require_once "app/config/config.php";
+require_once "app/config/helpers.php";
 
-$conexao = new MVC2020\Models\Conexao;
+
+
+new \MVC2020\Core\Core;
+
 
 //$prod = new MVC2020\Models\Produto;
 
@@ -10,5 +14,6 @@ $conexao = new MVC2020\Models\Conexao;
 // print_r($today);
 
 //echo date("h:i:sa");
-
+//debug(explode('/',rtrim($_GET['path'],'/')));
 ?>
+
