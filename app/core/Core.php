@@ -46,7 +46,12 @@ class Core
  
 
         //ERROR PAGE
-
+        if($flag)
+        {
+            $controllerName = '\\MVC2020\\Core\\Page404';
+            $controller = new $controllerName();
+            $controller->index();
+        }
  
 
     }
