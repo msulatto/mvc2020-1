@@ -17,4 +17,4 @@ define('DATABASE', [
 
 date_default_timezone_set('America/Sao_Paulo');
 
-define('ROOT','http://localhost/mvc2020/app/views/assets/');
+define('ROOT','http://localhost/mvc2020/');
