@@ -1,13 +1,28 @@
-<?php
-    include_once "includes/header.php";
-?>
-
-
-
-<p class="fas fa-andry">conteudo da HOME</p>
-
-<i class="fas fa-head-side-cough"></i>
-
-<?php
-    include_once "includes/footer.php";
-?>
+<div class="container bg-danger">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://images3.alphacoders.com/103/1034504.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://1.bp.blogspot.com/-wpPG0WVXZQE/XrTk-vIxrSI/AAAAAAAAuz0/aAaH6TrEruE33vYKQfxLoZ_J_3AashXqACLcBGAsYHQ/s2560/synthwave-pyramid-4k-te-3840x2160.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://images.alphacoders.com/788/788885.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>

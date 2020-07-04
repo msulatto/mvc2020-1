@@ -7,8 +7,7 @@ class Page404
 {
     public function index()
     {
-
-        $nome = 'marcelli'; 
+        $nome = 'marcelli';
         echo $conteudo = <<<ETEC
         <h1>boa noite {$nome}</<h1>
         <h1>erro 404 PÁGINA NÃO FOI ENCONTRADA! :(((( </h1>

@@ -1,7 +1,6 @@
 <?php
-namespace MVC2020\Core;
 
- 
+namespace MVC2020\Core;
 
 class Core
 {
@@ -9,31 +8,28 @@ class Core
     {
         $flag = false;
         // 1. Rotas
-        if(isset($_GET['path'])){
+        if (isset($_GET['path'])) {
             $token = explode('/', rtrim($_GET['path'], '/'));
             // 2. Dispatcher
             $controllerName = ucfirst(array_shift($token));
-           
+
             // Verifica se o arquivo existe na pasta controller
-           if(file_exists('app/controllers/'.$controllerName.'.php')){
-                $controllerName = '\\MVC2020\\Controllers\\'.$controllerName;
+            if (file_exists('app/controllers/' . $controllerName . '.php')) {
+                $controllerName = '\\MVC2020\\Controllers\\' . $controllerName;
                 $controller = new $controllerName();
                 // 2.1. Metodo
-                if(!empty($token)){
+                if (!empty($token)) {
                     $actionName = array_shift($token);
-                    if(method_exists($controller, $actionName ))
-                    {
+                    if (method_exists($controller, $actionName)) {
                         $controller->{$actionName}(@$token);
                     }
-                }
-                else{
+                } else {
                     //Valor Default Index
                     $controller->index();
                 }
-            }
-            else{
-            // Se o controller nao foi encontrado
-            $flag = true;
+            } else {
+                // Se o controller nao foi encontrado
+                $flag = true;
             }
         } else {
             //NAO TEM CONTROLLER
@@ -43,16 +39,11 @@ class Core
             $controller->index();
         }
 
- 
-
         //ERROR PAGE
-        if($flag)
-        {
+        if ($flag) {
             $controllerName = '\\MVC2020\\Core\\Page404';
             $controller = new $controllerName();
             $controller->index();
         }
- 
-
     }
 }

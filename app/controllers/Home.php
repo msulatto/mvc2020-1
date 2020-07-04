@@ -1,11 +1,10 @@
 <?php
-
 namespace MVC2020\Controllers;
 
-class Home
+class Home extends Controller
 {
     public function index()
     {
-        echo "opa, chegamos aqui CONTROLLERS HOME";
+        $this->view->render('home');
     }
 }

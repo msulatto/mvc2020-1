@@ -2,10 +2,11 @@
 
 namespace MVC2020\Controllers;
 
-class Produtos
+class Produtos extends Controller
 {
     public function index()
     {
-        echo 'Controllers Produtos';
+        $this->view->mensagem = 'dado vindo do banco';
+        $this->view->render('produtos');
     }
 }
